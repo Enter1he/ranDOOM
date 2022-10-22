@@ -81,4 +81,3 @@ Or shuffle with deck's own rand function
 This all creates a variety of situations for possible use. You can even manage AI
 with a state machine, but from now on it's up to you!
 
-```
