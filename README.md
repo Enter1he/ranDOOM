@@ -33,12 +33,12 @@ At certain point in the game it would be highly likely to allow player to see an
 giving them more opportunities to use game mechanics to thier advantage instead of feeling upset about another
 random encounter. RanDoom allows to control randomness in your game by creating and editing the table of numbers.
 ```Lua
-    local t = rDm.genTable(4)
+    local t = rDm.genTable(1,4)
     rDm.saveTable(t, "MyRNG.lua")
 ```
 Then by using function makeRand you can get new random function for your usage
 ```Lua
-    local myrand = rDm.makeRand(t, 3)
+    local myrand = rDm.makeRand(t, 1, 3)
 ```
 This function will return any values from 1 to 4 in an order described by the table
 ```Lua
@@ -48,7 +48,7 @@ This function will return any values from 1 to 4 in an order described by the ta
 RanDoom also provides an ability to create some unique abstractions
 For example, in a card game called Fool you can easily store the whole deck in such an array:
 ```Lua
-    local deck = rDm.genTable(36) -- creating a deck of card
+    local deck = rDm.genTable(1,36) -- creating a deck of card
     local spades, hearts, clubs, diamonds = 0, 1, 2, 3
 ```
 Now comparing the value of each card would be a simple number comparison:
@@ -75,7 +75,7 @@ Additionally you can use your own rand function to shuffle
 ```
 Or shuffle with deck's own rand function
 ```Lua
-    local deckrnd = rDm.makeRand(deck, 2)
+    local deckrnd = rDm.makeRand(deck, 1, 2)
     rDm.ShuffleTable(deck, deckrnd)
 ```
 This all creates a variety of situations for possible use. You can even manage AI
