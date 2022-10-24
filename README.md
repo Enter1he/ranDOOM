@@ -1,5 +1,5 @@
 # ranDOOM
-a table random number generator based on original DOOM randomizer
+a lua library for generating numbers with DOOM-style table algorithm
 
 ## Explanation
 
