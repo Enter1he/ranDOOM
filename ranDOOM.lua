@@ -19,7 +19,7 @@ local function random(s, e)
     x = (x % e) + s
     return x
 end
-local min, max = function()end, function()end
+local min, max = function()end, function()end --some private variables' names 
 
 --[[
     ranDOOM.ShuffleTable(t: table, rand: function(m, n: integer))
